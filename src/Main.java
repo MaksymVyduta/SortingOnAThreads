@@ -3,6 +3,16 @@ import java.io.PrintWriter;
 import java.util.Random;
 
 public class Main implements Tablica {
+    public static int[][] LosowanieTablicy() {
+        int wylosowane[][] = new int[16][2000000];
+        Random los = new Random();
+        for (int i = 0; i < wylosowane.length; i++) {
+            for (int j = 0; j < wylosowane[i].length; j++) {
+                wylosowane[i][j] = los.nextInt(2000000000);
+            }
+        }
+        return wylosowane;
+    }
 
     public static void main(String[] args) throws InterruptedException , FileNotFoundException {
         long millisActualTime = System.currentTimeMillis();
